@@ -1,0 +1,72 @@
+[System]
+Name='TSP'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Pheromone_Weight'
+Range=[0 5]
+NumMFs=3
+MF1='Low_Density':'trimf',[0 1 2]
+MF2='Medium_Density':'trimf',[1.5 2.5 3.5]
+MF3='High_Density':'trimf',[3 4 5]
+
+[Input2]
+Name='Number_of_ants'
+Range=[0 10]
+NumMFs=3
+MF1='Small':'trapmf',[-3.333 -3.333 1.667 3.333]
+MF2='Medium':'trapmf',[1.667 3.333 6.667 8.333]
+MF3='High':'trapmf',[6.667 8.333 10 10]
+
+[Input3]
+Name='Iterations'
+Range=[0 100]
+NumMFs=3
+MF1='Small':'trapmf',[-100 -10 30 40]
+MF2='Middle':'trapmf',[30 40 60 70]
+MF3='Large':'trapmf',[60 70 105 145]
+
+[Output1]
+Name='BestSolution'
+Range=[0 1]
+NumMFs=2
+MF1='Longest_Path':'trapmf',[-100 0.2 0.4 0.5]
+MF2='Shortest_Path':'trapmf',[0.5 0.6 100 100]
+
+[Rules]
+3 3 3, 2 (1) : 1
+3 2 3, 2 (1) : 1
+3 1 3, 2 (1) : 1
+3 3 2, 2 (1) : 1
+3 2 2, 2 (1) : 1
+3 1 2, 1 (1) : 1
+3 3 1, 2 (1) : 1
+3 2 1, 1 (1) : 1
+3 1 1, 1 (1) : 1
+1 3 3, 1 (1) : 1
+1 3 2, 1 (1) : 1
+1 3 1, 1 (1) : 1
+1 2 3, 1 (1) : 1
+1 2 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 1 3, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 1, 1 (1) : 1
+2 3 3, 2 (1) : 1
+2 3 2, 1 (1) : 1
+2 3 1, 1 (1) : 1
+2 2 3, 1 (1) : 1
+2 2 2, 1 (1) : 1
+2 2 1, 1 (1) : 1
+2 1 3, 1 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 1, 1 (1) : 1
