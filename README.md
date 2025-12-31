@@ -123,12 +123,6 @@ Shakthi Bala
 
 ---
 
-### ✅ Why this README is strong
-- Matches your **actual folder structure**
-- Explains **MOEPSO clearly**
-- ROS-native (topics, build, run, RViz)
-- Research- and resume-ready
-
 If you want next, I can:
 - Add **algorithm flow diagrams**
 - Rewrite this as a **research-paper companion repo**
